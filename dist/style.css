@@ -274,7 +274,7 @@ html, .index__html {
     padding: 0 5vw; }
   .contact__section__header {
     margin-bottom: 2rem;
-    margin-top: 10vh; }
+    margin-top: 5vh; }
     .contact__section__header > div {
       display: inline-block;
       color: #7accff;
@@ -351,21 +351,36 @@ html, .index__html {
     visibility: hidden;
     width: 0; }
   .form__input, .form__textarea {
+    display: block;
     padding: 1rem;
-    background-color: #bee6ff;
-    color: #060a30;
+    background-color: #0c125c;
+    color: #eee;
     border-radius: .3rem;
+    font-size: 1.2rem;
     outline: none;
     border: none; }
-  .form__same-line {
-    display: flex;
-    width: 100%; }
-
-#name {
-  margin-right: 1rem; }
-
-#email {
-  margin-left: 1rem; }
+    .form__input::placeholder, .form__textarea::placeholder {
+      color: #eee; }
+    .form__input:invalid, .form__textarea:invalid {
+      color: orangered; }
+    .form__input:valid, .form__textarea:valid {
+      color: #7accff; }
+  .form__textarea {
+    resize: vertical; }
+  .form__submit {
+    margin-top: 2rem;
+    padding: .5rem;
+    width: 4vw;
+    align-self: flex-end;
+    background-color: #060a30;
+    outline: none;
+    color: #bee6ff;
+    border: 1px solid #bee6ff;
+    border-radius: .3rem; }
 
 #subject {
   margin-bottom: 1rem; }
+
+#message {
+  width: 100%;
+  font-family: 'Roboto', sans-serif; }

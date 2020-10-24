@@ -10,6 +10,7 @@
 // VARIABLES
 
 $color-bg: #060a30;
+$color-bg-2: #0c135d;
 $color-font-primary: #eee;
 $color-primary: #7accff;
 $color-primary-faded: #bee6ff;
@@ -402,7 +403,7 @@ html {
     &__header {
 
         margin-bottom: 2rem;
-        margin-top: 10vh;
+        margin-top: 5vh;
 
         & > div {
             display: inline-block;
@@ -515,28 +516,52 @@ html {
 
     &__input,
     &__textarea {
+        display: block;
         padding: 1rem;
-        background-color: $color-primary-faded;
-        color: $color-bg;
+        background-color: #0c125c;
+        color: $color-font-primary;
         border-radius: .3rem;
+        font-size: 1.2rem;
         outline: none;
         border: none;
+
+        &::placeholder {
+            color: $color-font-primary;
+        }
+
+        &:invalid {
+            color: orangered;
+        }
+
+        &:valid {
+            color: $color-primary;
+        }
     }
 
-    &__same-line {
-        display: flex; 
-        width: 100%; 
+    &__textarea {
+        resize: vertical;
+    }
+
+    &__submit {
+        margin-top: 2rem;
+        padding: .5rem;
+        width: 4vw;
+        align-self: flex-end;
+        background-color: $color-bg;
+        outline: none;
+        color: $color-primary-faded;
+        border: 1px solid $color-primary-faded;
+        border-radius: .3rem;
     }
 }
 
-#name {
-    margin-right: 1rem;
-}
-
-#email {
-    margin-left: 1rem;
-}
+// ID ELEMENTS
 
 #subject {
     margin-bottom: 1rem;
+}
+
+#message {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
 }
