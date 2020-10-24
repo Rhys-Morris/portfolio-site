@@ -10,10 +10,17 @@
 // VARIABLES
 
 $color-bg: #060a30;
-$color-bg-2: #080d3f;
 $color-font-primary: #eee;
 $color-primary: #7accff;
 $color-primary-faded: #bee6ff;
+
+$breakpoint1: 1400px;
+$breakpoint2: 1100px;
+$breakpoint3: 875px;
+$breakpoint4: 725px;
+$breakpoint5: 600px;
+$breakpoint6: 470px;
+$breakpoint7: 375px;
 
 // FONTS
 
@@ -43,6 +50,15 @@ font-family: 'Roboto Mono', monospace;
     }
 }
 
+@keyframes moveInRight {
+    0% {
+        transform: translatex(-100rem);
+    }
+    100% {
+        transform: translatex(0);
+    }
+}
+
 html {
     font-size: 62.5%; // 1rem = 10px
     font-weight: 400;
@@ -50,6 +66,19 @@ html {
     color: $color-font-primary;
     background-color: $color-primary-faded;
     padding: 5rem;
+
+    @media only screen and (max-width: $breakpoint4) {
+        padding: 2.5rem;
+    }  
+
+    @media only screen and (max-width: $breakpoint5) {
+        font-size: 56.25%; // 1rem = 9px
+        padding: 0;
+    }
+
+    @media only screen and (max-width: $breakpoint7) {
+        font-size: 50%; // 1rem = 8px
+    }  
 }
 
 body {
@@ -57,12 +86,39 @@ body {
     border-radius: 2rem;
     padding: 0 10vw 0 5vw;
     box-shadow: 1rem 1rem 1rem .5rem rgba(0, 0, 0, .2);
+
+    @media only screen and (max-width: $breakpoint1) {
+        padding-right: 7.5vw;
+    }
+
+    @media only screen and (max-width: $breakpoint2) {
+        padding-right: 5vw;
+        padding-left: 2vw;
+    }
+
+    @media only screen and (max-width: $breakpoint4) {
+        padding-bottom: 5vh;
+    }
+
+    @media only screen and (max-width: $breakpoint5) {
+        border-radius: 0;
+    }
+
+    @media only screen and (max-width: $breakpoint7) {
+        padding-left: 0;
+        padding-right: 2.5vw;
+    }  
 }
 
 header {
     height: 20vh;
     padding-top: 10vh;
     margin-bottom: 3rem;
+
+    @media only screen and (max-width: $breakpoint4) {
+        height: 10vh;
+        padding-top: 7.5vh;
+    }  
 }
 
 .nav {
@@ -70,12 +126,20 @@ header {
     justify-content: flex-end;
     align-content: center;
 
+    @media only screen and (max-width: $breakpoint5) {
+        display: block;
+    }
+
     &__item {
         list-style: none;
     }
 
     &__list {
         display: flex;
+
+        @media only screen and (max-width: $breakpoint5) {
+            justify-content: space-around;
+        }
     }
 
     &__link:visited,
@@ -87,6 +151,10 @@ header {
         padding-bottom: .5rem;
         margin-right: 5rem;
         transition: .2s all;
+
+        @media only screen and (max-width: $breakpoint5) {
+            margin-right: 0;
+        }
     }
 
     &__link:hover,
@@ -98,10 +166,36 @@ header {
 main {
     min-height: 65vh; 
     display: flex;
+
+    @media only screen and (max-width: $breakpoint4) {
+        flex-direction: column-reverse;
+        min-height: 75vh;
+    }
+
+    @media only screen and (max-width: $breakpoint5) {
+        height: 81.75vh;
+        justify-content: space-around;
+    }
 }
 
 .hero {
     margin-left: 15vw;
+
+    @media only screen and (max-width: $breakpoint1) {
+        margin-left: 10vw;
+    }
+
+    @media only screen and (max-width: $breakpoint3) {
+        margin-left: 7.5vw;
+    }
+
+    @media only screen and (max-width: $breakpoint4) {
+        margin-left: 10vw;
+    }  
+
+    @media only screen and (max-width: $breakpoint5) {
+        margin-left: 15vw;
+    }  
 
     &__title {
         font-size: 4rem;
@@ -121,6 +215,18 @@ main {
         font-size: 6rem;
         border-bottom: 4px solid $color-primary;
         padding-right: 25vw;
+
+        @media only screen and (max-width: $breakpoint2) {
+            padding-right: 17.5vw;
+        }
+
+        @media only screen and (max-width: $breakpoint3) {
+            padding-right: 10vw;
+        }
+
+        @media only screen and (max-width: $breakpoint5) {
+            padding-right: 2.5vw;
+        }
     }
 
     &__box {
@@ -144,6 +250,27 @@ main {
         column-count: 2;
         column-gap: 2rem;
         margin-bottom: 5vh;
+
+        @media only screen and (max-width: $breakpoint1) {
+            width: 40vw;
+        }
+
+        @media only screen and (max-width: $breakpoint2) {
+            column-count: 1;
+            font-size: 1.2rem;
+        }
+
+        @media only screen and (max-width: $breakpoint3) {
+            font-size: 1.2rem;
+        }
+
+        @media only screen and (max-width: $breakpoint4) {
+            width: 50vw;
+        }
+
+        @media only screen and (max-width: $breakpoint6) {
+            width: 60vw;
+        }
     }
 }
 
@@ -159,22 +286,53 @@ main {
 
     animation: dropdown 1.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 
+    @media only screen and (max-width: $breakpoint4) {
+        justify-content: center;
+        flex-direction: row;
+        align-self: flex-end;
+        margin-left: 7.5vw;
+        margin-top: 5vh;
+        
+        animation: moveInRight 1.5s cubic-bezier(0.34, 1.26, 0.64, 1);;
+        bottom: 0;
+    }
+
+    @media only screen and (max-width: $breakpoint5) {
+        margin-right: 2.5vw;
+    }
+
+    &__box {
+        @media only screen and (max-width: $breakpoint4) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
     &__text {
         font-size: 1.4rem;
         font-weight: 500;
         transform: rotate(90deg);
         margin-bottom: 6rem;
-        width: 5vw;
+
+        @media only screen and (max-width: $breakpoint4) {
+            transform: rotate(0);
+            margin-bottom: 0;
+        }
     }
 
     &__item {
         list-style: none;
         margin-bottom: 2rem;
+
+        @media only screen and (max-width: $breakpoint4) {
+            margin-bottom: 0;
+            margin-left: 2rem;
+        }    
     }
 
     &__icon {
         height: 4rem;
-        fill: $color-primary;
     }
 }
 
@@ -189,6 +347,23 @@ main {
     margin-right: 3rem;
     transition: .3s all;
     animation: fadein 3s ease;
+
+    @media only screen and (max-width: $breakpoint2) {
+        padding: 1.75rem 3.5rem;
+    }
+
+    @media only screen and (max-width: $breakpoint3) {
+        padding: 1.5rem 3rem;
+    }
+
+    @media only screen and (max-width: $breakpoint5) {
+        padding: 1rem 2rem;
+    }
+
+    @media only screen and (max-width: $breakpoint7) {
+        margin-right: 1.5rem;
+        padding: .8rem 1.6rem;
+    }  
 
     &:hover {
         cursor: pointer;
