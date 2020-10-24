@@ -112,11 +112,11 @@ main {
   @media only screen and (max-width: 725px) {
     main {
       flex-direction: column-reverse;
+      justify-content: space-around;
       min-height: 75vh; } }
   @media only screen and (max-width: 600px) {
     main {
-      height: 81.75vh;
-      justify-content: space-around; } }
+      height: 81.75vh; } }
 
 .hero {
   margin-left: 15vw; }

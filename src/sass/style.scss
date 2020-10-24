@@ -169,12 +169,12 @@ main {
 
     @media only screen and (max-width: $breakpoint4) {
         flex-direction: column-reverse;
+        justify-content: space-around;
         min-height: 75vh;
     }
 
     @media only screen and (max-width: $breakpoint5) {
         height: 81.75vh;
-        justify-content: space-around;
     }
 }
 
