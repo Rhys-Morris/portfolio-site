@@ -56,6 +56,7 @@ body {
     background-color: $color-bg;
     border-radius: 2rem;
     padding: 0 10vw 0 5vw;
+    box-shadow: 1rem 1rem 1rem .5rem rgba(0, 0, 0, .2);
 }
 
 header {
@@ -80,6 +81,7 @@ header {
     &__link:visited,
     &__link {
         color: $color-font-primary;
+        border-bottom: 2px solid $color-bg;
         text-decoration: none;
         font-size: 1.6rem;
         padding-bottom: .5rem;
@@ -138,7 +140,7 @@ main {
     &__text {
         font-family: 'Roboto Mono', monospace;
         font-size: 1.4rem;
-        width: 70%;
+        width: 35vw;
         column-count: 2;
         column-gap: 2rem;
         margin-bottom: 5vh;
