@@ -2,4 +2,4 @@
 
 WIP personal portfolio
 
-[**View**](https://github.com/Rhys-Morris/portfolio-site/dist/index.html)
+[**View**](https://rhys-morris.github.io/portfolio-site/)
