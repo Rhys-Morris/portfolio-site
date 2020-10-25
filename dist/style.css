@@ -23,6 +23,17 @@
     opacity: 1;
     transform: translateY(0); } }
 
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-3rem); }
+  67% {
+    opacity: 0;
+    transform: translateY(-3rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -55,28 +66,13 @@
   bottom: 5vh;
   left: 1vw;
   animation: dropdown 1.5s cubic-bezier(0.34, 1.56, 0.64, 1); }
-  @media only screen and (max-width: 725px) {
-    .socials {
-      justify-content: center;
-      flex-direction: row;
-      align-self: flex-end;
-      margin-left: 7.5vw;
-      margin-top: 5vh;
-      animation: moveInRight 1.5s cubic-bezier(0.34, 1.26, 0.64, 1);
-      bottom: 0; } }
-  @media only screen and (max-width: 600px) {
-    .socials {
-      margin-right: 2.5vw; } }
-  @media only screen and (max-width: 725px) {
-    .socials__box {
-      display: flex;
-      align-items: center;
-      justify-content: center; } }
   .socials__text {
     font-size: 1.4rem;
     font-weight: 500;
     transform: rotate(90deg);
-    margin-bottom: 6rem; }
+    margin-bottom: 6rem;
+    letter-spacing: 2px;
+    font-family: 'Roboto monospace', sans-serif; }
     @media only screen and (max-width: 725px) {
       .socials__text {
         transform: rotate(0);
@@ -343,7 +339,8 @@ main {
   .hero__scroll-down {
     width: 3rem;
     align-self: center;
-    margin-top: auto; }
+    margin-top: auto;
+    animation: fadeInDown 3s ease; }
 
 .about {
   display: flex;
@@ -359,8 +356,9 @@ main {
     align-items: center; }
   .about__text {
     width: 30vw;
-    font-size: 1.6rem;
-    word-spacing: 2px; }
+    font-size: 1.5rem;
+    word-spacing: 2px;
+    color: #d5d5d5; }
   .about__photo {
     height: 30rem;
     margin-left: 4rem;
@@ -395,10 +393,21 @@ main {
     padding: 5rem; }
     .work__languages__icon {
       width: 50%; }
+      .work__languages__icon-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+      .work__languages__icon__text {
+        font-family: 'Roboto Mono', monospace;
+        margin-top: 1.2rem;
+        font-size: 1.4rem; }
 
 .contact {
-  margin-top: 25vh;
-  width: 50vw; }
+  display: flex;
+  flex-direction: column;
+  margin-top: 25vh; }
+  .contact__header {
+    padding-right: 10rem; }
 
 .footer {
   height: 10vh;

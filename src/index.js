@@ -12,4 +12,72 @@ window.addEventListener('scroll', (e) => {
 
 // Navigate smoothly with navbar links
 
-// Form submission
+// Form 
+
+// Animations for language icons
+
+const git = document.querySelector('.git');
+
+git.addEventListener('mouseover', () => {
+    git.classList.add('animate__animated')
+    git.classList.add('animate__rubberBand')
+})
+git.addEventListener('mouseout', () => {
+    git.classList.remove('animate__animated')
+    git.classList.remove('animate__rubberBand')
+})
+
+const htmlIcon = document.querySelector('.html5');
+
+htmlIcon.addEventListener('mouseover', () => {
+    htmlIcon.classList.add('animate__animated')
+    htmlIcon.classList.add('animate__bounce')
+})
+htmlIcon.addEventListener('mouseout', () => {
+    htmlIcon.classList.remove('animate__animated')
+    htmlIcon.classList.remove('animate__bounce')
+})
+
+const cssIcon = document.querySelector('.css3');
+
+cssIcon.addEventListener('mouseover', () => {
+    cssIcon.classList.add('animate__animated')
+    cssIcon.classList.add('animate__jello')
+})
+cssIcon.addEventListener('mouseout', () => {
+    cssIcon.classList.remove('animate__animated')
+    cssIcon.classList.remove('animate__jello')
+})
+
+const sassIcon = document.querySelector('.sass');
+
+sassIcon.addEventListener('mouseover', () => {
+    sassIcon.classList.add('animate__animated')
+    sassIcon.classList.add('animate__flip')
+})
+sassIcon.addEventListener('mouseout', () => {
+    sassIcon.classList.remove('animate__animated')
+    sassIcon.classList.remove('animate__flip')
+})
+
+const javascriptIcon = document.querySelector('.javascript-icon');
+
+javascriptIcon.addEventListener('mouseover', () => {
+    javascriptIcon.classList.add('animate__animated')
+    javascriptIcon.classList.add('animate__tada')
+})
+javascriptIcon.addEventListener('mouseout', () => {
+    javascriptIcon.classList.remove('animate__animated')
+    javascriptIcon.classList.remove('animate__tada')
+})
+
+const rubyIcon = document.querySelector('.ruby');
+
+rubyIcon.addEventListener('mouseover', () => {
+    rubyIcon.classList.add('animate__animated')
+    rubyIcon.classList.add('animate__swing')
+})
+rubyIcon.addEventListener('mouseout', () => {
+    rubyIcon.classList.remove('animate__animated')
+    rubyIcon.classList.remove('animate__swing')
+})

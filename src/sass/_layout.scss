@@ -161,7 +161,7 @@ main {
         width: 3rem;
         align-self: center;
         margin-top: auto;
-    
+        animation: fadeInDown 3s ease;    
     }
 }
 
@@ -189,8 +189,9 @@ main {
 
     &__text {
         width: 30vw;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         word-spacing: 2px;
+        color: $color-font-secondary;
     }
 
     &__photo {
@@ -241,6 +242,18 @@ main {
 
         &__icon {
             width: 50%;
+
+            &-box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            &__text {
+                font-family: 'Roboto Mono', monospace;;
+                margin-top: 1.2rem;
+                font-size: 1.4rem;  
+            }
         }
     }
 }
@@ -248,8 +261,13 @@ main {
 // CONTACT SECTION
 
 .contact {
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        padding-right: 10rem;
+    }
     margin-top: 25vh;
-    width: 50vw;   // TEST
 }
 
 // FOOTER
