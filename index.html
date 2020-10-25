@@ -11,11 +11,10 @@
 <body class="index__body">
     <header class="index__header">
         <nav class="nav">
-            <a href="../../index.html"><img src="../../src/img/logo.jpg" alt="logo" class="nav__logo"></a>
             <ul class="nav__list">
-                <li class="nav__item"><a href="./dist/pages/projects.html" class="nav__link"><span class="hl">01.</span>Projects</a></li>
-                <li class="nav__item"><a href="./dist/pages/about.html" class="nav__link"><span class="hl">02.</span>About</a></li>
-                <li class="nav__item"><a href="./dist/pages/contact.html" class="nav__link"><span class="hl">03.</span>Contact</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link drop-in--2"><span class="hl">01.</span>About</a></li>
+                <li class="nav__item"><a href="#" class="nav__link drop-in--3"><span class="hl">02.</span>Work</a></li>
+                <li class="nav__item"><a href="#" class="nav__link drop-in--4"><span class="hl">03.</span>Contact</a></li>
                 <a href="#" class="resume btn-alt">Resume</a>
             </ul>
         </nav>
@@ -24,9 +23,9 @@
     <section class="socials">
         <p class="socials__text">get in touch<p>
             <div class="socials__box">
-                <li class="socials__item"><a href="https://twitter.com/RhysMorris91" class="socials__link"><img src="./src/img/407-twitter.svg" alt="twitter-icon-link"></a></li>
-                <li class="socials__item"><a href="https://github.com/Rhys-Morris" class="socials__link"><img src="./src/img/433-github.svg" alt="github-icon-link"></a></li>
-                <li class="socials__item"><a href="https://www.linkedin.com/in/rhys-morris-37ba241b9/" class="socials__link"><img src="./src/img/459-linkedin2.svg" alt="linkedin-icon-link"></a></li>
+                <li class="socials__item"><a href="https://twitter.com/RhysMorris91" class="socials__link"><img src="./src/img/407-twitter.svg" alt="twitter-icon-link" class="socials__icon"></a></li>
+                <li class="socials__item"><a href="https://github.com/Rhys-Morris" class="socials__link"><img src="./src/img/433-github.svg" alt="github-icon-link" class="socials__icon"></a></li>
+                <li class="socials__item"><a href="https://www.linkedin.com/in/rhys-morris-37ba241b9/" class="socials__link"><img src="./src/img/459-linkedin2.svg" alt="linkedin-icon-link" class="socials__icon"></a></li>
             </div>
     </section>
     <section class="hero">
@@ -37,9 +36,53 @@
             </div>
         </div>
         <p class="hero__text"> 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            I'm a web developer based in Melbourne, Australia. I'm passionate about building accessible, interactive websites and web applications.
+        </p>
         <a href="dist/pages/contact.html"><button class="btn-alt">Contact Me!</button></a>
-        </section>
+        <img src="./src/img/324-circle-down.svg" alt="scroll-down-prompt" class="hero__scroll-down">
+    </section>
+    <section class="about" id="about">
+        <h2 class="header-2 about__header"><span class="header-2--numeral">01.</span>About Me</h2>
+        <div class="about__box">
+            <p class="about__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <div class="frame">
+                <img src="./src/img/photo.png" alt="rhys-morris-photo" class="about__photo">
+            </div>
+        </div>
+    </section>
+    <section class="work">
+        <h2 class="header-2 work__header"><span class="header-2--numeral">02.</span>Work</h2>
+        <div class="work__languages">
+            <img src="./src/img/icons8-html-5.svg" alt="html-5-icon" class="work__Languages__icon">
+            <img src="./src/img/icons8-css3.svg" alt="css3-icon" class="work__Languages__icon">
+            <img src="./src/img/icons8-sass.svg" alt="sass-icon" class="work__Languages__icon">
+            <img src="./src/img/icons8-javascript.svg" alt="javascript-icon" class="work__Languages__icon">
+            <img src="./src/img/icons8-ruby-programming-language.svg" alt="ruby-icon" class="work__Languages__icon">
+            <img src="./src/img/icons8-git.svg" alt="git-icon" class="work__Languages__icon">
+        </div>
+        <div class="work__projects">
+
+        </div>
+    </section>
+    <section class="contact">
+        <h2 class="header-2 contact__header"><span class="header-2--numeral">03.</span>Contact</h2>
+        <form action="" class="contact__section__form form">
+            <label for="name" class="form__label">Name</label>
+            <input type="text" id="name" class="form__input" placeholder="Name" required>
+            <label for="email" class="form__label">Email</label>
+            <input type="email" id="email" class="form__input" placeholder="Email" required>
+            <label for="subject" class="form__label">Email</label>
+            <input type="text" id="subject" class="form__input" placeholder="Subject" required>
+            <textarea id="message" class="form__textarea" id="message" cols="20" rows="10" placeholder="Message" required></textarea>
+            <input type="submit" class="form__submit" value="Send">
+    </form>
+    </section>
     </main>
+    <footer class="footer">
+        <p class="footer__note">Built by Rhys Morris</p>
+    </footer>
+    <script src="./src/index.js"></script>
 </body>
 </html>
