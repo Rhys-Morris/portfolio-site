@@ -227,9 +227,48 @@
     font-family: 'Roboto', sans-serif;
 }
 
-hr {
-    width: 30vw;
-    border: none;
-    border-bottom: 1rem dotted $color-primary-faded;
+// Hamburger icon
 
+.hamburger-div {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 3.8rem;
+    height: 3rem;
+
+    position: absolute;
+    right: 3vw;
+    top: 3vh;
+
+    @media only screen and (max-width: $breakpoint6) {
+        display: flex;
+    }
+
+    &:hover {
+        .hamburger-line {
+            background-color: $color-primary;
+        }
+    }
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 4px;
+    background-color: $color-primary-faded;
+}
+
+.hamburger-line--1.active {
+    transform: rotate(45deg);
+    transform-origin: left;
+}
+
+.hamburger-line--2.active {
+    display: none;
+}
+
+.hamburger-line--3.active {
+    transform: rotate(-45deg);
+    transform-origin: left;
 }

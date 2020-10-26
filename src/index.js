@@ -10,11 +10,76 @@ window.addEventListener('scroll', (e) => {
 
 // Section content fade in with scroll down page
 
-// Navigate smoothly with navbar links
+// ----- OPEN/CLOSE HAMBURGER MENU -----
 
-// Form 
+const hamburger = document.querySelector('.hamburger-div');
+const navList = document.querySelector('.nav__list');
+const resume = document.querySelector('.resume');
+const navItem = Array.from(document.querySelectorAll('.nav__item'));
+const navLink = Array.from(document.querySelectorAll('.nav__link'));
+const navBar = document.querySelector('.nav');
+const main = document.querySelector('main');
+const hamburgerLines = Array.from(document.querySelectorAll('.hamburger-line'));
 
-// Animations for language icons
+let hamburgerOpened = false;
+let hamburgerOpen = false;
+
+hamburger.addEventListener('click', () => {
+    
+    // First time opened
+    if (!hamburgerOpened) {
+        // Style bar
+        navList.style.display = 'flex';
+        navList.style['flex-direction'] = 'column';
+        navList.style['position'] = 'absolute';
+        navList.style['top'] = '15vh';
+        navList.style['left'] = '2vw';
+
+        // Style links
+        navLink.forEach(link => {
+            link.style['font-size'] = '2rem';
+        });
+
+        // Pad links
+        navItem.forEach(item  => {
+            item.style['padding-bottom'] = '8vh';
+        });
+
+        // Style resume
+        resume.style['font-size'] = '2rem';
+
+        hamburgerOpened = true;
+    }
+
+    // Subsequent opening/closes
+    if (hamburgerOpen) {
+        navList.style.display = 'none';
+        main.style.opacity = '1';
+
+        hamburgerLines.forEach(line => line.classList.remove('active'));
+        hamburgerOpen = false;
+    } else {
+        navList.style.display = 'flex';
+        navBar.style['z-index'] = '100';
+        main.style.opacity = '.1';
+
+        hamburgerLines.forEach(line => line.classList.add('active'));
+        hamburgerOpen = true;
+    }
+
+    // Deal with clicking on links
+    navLink.forEach(link => {
+        link.addEventListener('click', () => {
+            navList.style.display = 'none';
+            main.style.opacity = '1';
+    
+            hamburgerLines.forEach(line => line.classList.remove('active'));
+            hamburgerOpen = false;
+        })
+    })
+})
+
+// Add animations to languages section
 
 const git = document.querySelector('.git');
 

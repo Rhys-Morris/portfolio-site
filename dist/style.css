@@ -216,10 +216,37 @@
   width: 100%;
   font-family: 'Roboto', sans-serif; }
 
-hr {
-  width: 30vw;
-  border: none;
-  border-bottom: 1rem dotted #bee6ff; }
+.hamburger-div {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 3.8rem;
+  height: 3rem;
+  position: absolute;
+  right: 3vw;
+  top: 3vh; }
+  @media only screen and (max-width: 500px) {
+    .hamburger-div {
+      display: flex; } }
+  .hamburger-div:hover .hamburger-line {
+    background-color: #7accff; }
+
+.hamburger-line {
+  width: 100%;
+  height: 4px;
+  background-color: #bee6ff; }
+
+.hamburger-line--1.active {
+  transform: rotate(45deg);
+  transform-origin: left; }
+
+.hamburger-line--2.active {
+  display: none; }
+
+.hamburger-line--3.active {
+  transform: rotate(-45deg);
+  transform-origin: left; }
 
 .fixed-nav {
   position: fixed;
@@ -237,7 +264,8 @@ html {
   font-size: 62.5%;
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
-  color: #eee; }
+  color: #eee;
+  scroll-behavior: smooth; }
   @media only screen and (max-width: 600px) {
     html {
       font-size: 56.25%; } }
@@ -275,6 +303,9 @@ main {
       .nav__list {
         justify-content: space-evenly;
         width: 100%; } }
+    @media only screen and (max-width: 500px) {
+      .nav__list {
+        display: none; } }
   .nav__link:visited, .nav__link {
     color: #eee;
     border-bottom: 2px solid #040721;
@@ -350,7 +381,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 25vh; }
+  margin-top: 15vh;
+  padding-top: 10vh; }
   .about__header {
     padding-right: 10rem; }
     @media only screen and (max-width: 600px) {
@@ -405,7 +437,8 @@ main {
       background-color: #7accff; }
 
 .work {
-  margin-top: 25vh;
+  margin-top: 15vh;
+  padding-top: 10vh;
   display: flex;
   flex-direction: column; }
   .work__header {
@@ -452,7 +485,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 25vh; }
+  margin-top: 15vh;
+  padding-top: 10vh; }
   .contact__header {
     padding-right: 10rem; }
     @media only screen and (max-width: 600px) {

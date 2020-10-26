@@ -41,6 +41,10 @@ main {
             justify-content: space-evenly;
             width: 100%;
         }
+
+        @media only screen and (max-width: $breakpoint6) {
+            display: none;
+        }
     }
 
     &__link:visited,
@@ -153,7 +157,8 @@ main {
     justify-content: center;
     align-items: flex-start;
 
-    margin-top: 25vh;
+    margin-top: 15vh;
+    padding-top: 10vh;
     
 
     &__header {
@@ -232,7 +237,8 @@ main {
 // WORK SECTION
 
 .work {
-    margin-top: 25vh;
+    margin-top: 15vh;
+    padding-top: 10vh;
 
     display: flex;
     flex-direction: column;
@@ -300,6 +306,9 @@ main {
     justify-content: center;
     align-items: flex-start;
 
+    margin-top: 15vh;
+    padding-top: 10vh;
+
     &__header {
         padding-right: 10rem;
 
@@ -309,7 +318,6 @@ main {
             padding-right: 0;
         }
     }
-    margin-top: 25vh;
 }
 
 // FOOTER
