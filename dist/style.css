@@ -190,6 +190,9 @@
       color: #040721; }
     .form__input:focus, .form__textarea:focus {
       box-shadow: 0 0 0.2rem 0.5rem #7accff; }
+    @media only screen and (max-width: 600px) {
+      .form__input, .form__textarea {
+        font-size: 1.3rem; } }
   .form__textarea {
     resize: vertical;
     margin-top: .5rem; }
@@ -269,11 +272,16 @@ html {
   @media only screen and (max-width: 600px) {
     html {
       font-size: 56.25%; } }
+  @media only screen and (max-width: 400px) {
+    html {
+      font-size: 50%; } }
 
 body {
   background-color: #040721;
-  border-radius: 2rem;
   padding: 0 1rem; }
+  @media only screen and (max-width: 325px) {
+    body {
+      padding: 0 .5rem; } }
 
 header {
   padding-top: 3vh;
@@ -334,9 +342,21 @@ main {
     font-size: 5rem; }
     .hero__title--name {
       color: #7accff; }
+    @media only screen and (max-width: 500px) {
+      .hero__title {
+        font-size: 4rem; } }
+    @media only screen and (max-width: 325px) {
+      .hero__title {
+        font-size: 3.6rem; } }
   .hero__sub-title {
     font-size: 5rem;
     margin-bottom: 5rem; }
+    @media only screen and (max-width: 500px) {
+      .hero__sub-title {
+        font-size: 4rem; } }
+    @media only screen and (max-width: 325px) {
+      .hero__sub-title {
+        font-size: 3.6rem; } }
   .hero__dev {
     font-family: 'Dancing Script', cursive;
     font-size: 8rem;
@@ -348,6 +368,14 @@ main {
     @media only screen and (max-width: 900px) {
       .hero__dev {
         padding-right: 12.5vw; } }
+    @media only screen and (max-width: 500px) {
+      .hero__dev {
+        font-size: 6rem;
+        padding-right: 7.5vw; } }
+    @media only screen and (max-width: 325px) {
+      .hero__dev {
+        font-size: 5.2rem;
+        padding-right: 2.5vw; } }
   .hero__box {
     display: flex;
     justify-content: space-between;
@@ -451,6 +479,10 @@ main {
         align-self: flex-start;
         padding-left: 0;
         padding-right: 5rem; } }
+    @media only screen and (max-width: 500px) {
+      .work__header {
+        position: relative;
+        left: 15vw; } }
   .work__languages {
     display: flex;
     justify-content: space-around;
@@ -471,6 +503,14 @@ main {
     @media only screen and (max-width: 600px) {
       .work__languages {
         width: 80vw; } }
+    @media only screen and (max-width: 500px) {
+      .work__languages {
+        width: 100vw; } }
+    @media only screen and (max-width: 400px) {
+      .work__languages {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 33% 33% 33%;
+        row-gap: 2rem; } }
     .work__languages__icon-box {
       display: flex;
       flex-direction: column;

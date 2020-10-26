@@ -69,7 +69,7 @@ hamburger.addEventListener('click', () => {
 
     // Deal with clicking on links
     navLink.forEach(link => {
-        link.addEventListener('click', () => {
+        link.addEventListener(('click', 'touch'), () => {
             navList.style.display = 'none';
             main.style.opacity = '1';
     

@@ -1,7 +1,10 @@
 body {
     background-color: $color-bg;
-    border-radius: 2rem;
     padding: 0 1rem;
+
+    @media only screen and (max-width: $breakpoint8) {
+        padding: 0 .5rem;
+    }
 }
 
 header {
@@ -88,11 +91,27 @@ main {
         &--name {
             color: $color-primary;
         }
+
+        @media only screen and (max-width: $breakpoint6) {
+            font-size: 4rem;
+        }
+
+        @media only screen and (max-width: $breakpoint8) {
+            font-size: 3.6rem;
+        }
     }
 
     &__sub-title {
         font-size: 5rem;
         margin-bottom: 5rem;
+
+        @media only screen and (max-width: $breakpoint6) {
+            font-size: 4rem;
+        }
+
+        @media only screen and (max-width: $breakpoint8) {
+            font-size: 3.6rem;
+        }
     }
 
     &__dev {
@@ -107,6 +126,16 @@ main {
 
         @media only screen and (max-width: $breakpoint3) {
             padding-right: 12.5vw;
+        }
+
+        @media only screen and (max-width: $breakpoint6) {
+            font-size: 6rem;
+            padding-right: 7.5vw;
+        }
+
+        @media only screen and (max-width: $breakpoint8) {
+            font-size: 5.2rem;
+            padding-right: 2.5vw;
         }
     }
 
@@ -254,6 +283,11 @@ main {
             padding-left: 0;
             padding-right: 5rem;
         }
+
+        @media only screen and (max-width: $breakpoint6) {
+            position: relative;
+            left: 15vw;
+        }
     }
 
     &__languages {
@@ -279,6 +313,16 @@ main {
 
         @media only screen and (max-width: $breakpoint5) {
             width: 80vw;
+        }
+
+        @media only screen and (max-width: $breakpoint6) {
+            width: 100vw;
+        }
+
+        @media only screen and (max-width: $breakpoint7) {
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 33% 33% 33%;
+            row-gap: 2rem;
         }
 
         &__icon {

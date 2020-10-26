@@ -18,4 +18,8 @@ html {
     @media only screen and (max-width: $breakpoint5) {
         font-size: 56.25%; //1rem = 9px;
     }
+
+    @media only screen and (max-width: $breakpoint7) {
+        font-size: 50%; //1rem = 8px;
+    }    
 }
