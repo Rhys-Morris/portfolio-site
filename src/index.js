@@ -1,9 +1,35 @@
-// Reshow navbar on scroll up
+// ----- SCROLL FUNCTIONALITY -----
 
-const nav = document.querySelector('.nav');
+window.addEventListener('click', (e) => {
+    console.log(e.target);
+})
+
+const header = document.querySelector('header');
+const scrollDownIcon = document.querySelector('.hero__scroll-down');
+let previousScrollPosition = 0;
 
 window.addEventListener('scroll', (e) => {
-    console.log("The window has been scrolled");
+    
+    // Scroll down icon fade out
+    if (window.scrollY > 0) {
+        scrollDownIcon.style.opacity = '0';
+    }
+
+    // Scroll down icon fade in
+    if (window.scrollY == 0) {
+        scrollDownIcon.style.opacity = '1';
+    }
+    
+    /* if (window.scrollY > previousScrollPosition) {
+        header.style.position = 'relative';
+    }
+
+    if (window.scrollY < previousScrollPosition) {
+        header.style.position = 'fixed';
+    } */
+
+
+    previousScrollPosition = window.scrollY;
 })
 
 // Hide scroll down indicator as soon as user scrolls down
@@ -60,7 +86,7 @@ hamburger.addEventListener('click', () => {
         hamburgerOpen = false;
     } else {
         navList.style.display = 'flex';
-        navBar.style['z-index'] = '100';
+        navList.style['z-index'] = '100';
         main.style.opacity = '.1';
 
         hamburgerLines.forEach(line => line.classList.add('active'));
@@ -69,7 +95,7 @@ hamburger.addEventListener('click', () => {
 
     // Deal with clicking on links
     navLink.forEach(link => {
-        link.addEventListener(('click', 'touch'), () => {
+        link.addEventListener('click', () => {
             navList.style.display = 'none';
             main.style.opacity = '1';
     

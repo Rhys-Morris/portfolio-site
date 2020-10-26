@@ -285,7 +285,8 @@ body {
 
 header {
   padding-top: 3vh;
-  margin-bottom: 3vh; }
+  margin-bottom: 3vh;
+  transition: 1s all ease-in; }
 
 main {
   display: flex;
@@ -402,7 +403,8 @@ main {
     width: 3rem;
     align-self: center;
     margin-top: auto;
-    animation: fadeInDown 3s ease; }
+    animation: fadeInDown 3s ease;
+    transition: 1.5s opacity ease; }
     @media only screen and (max-width: 600px) {
       .hero__scroll-down {
         position: relative;

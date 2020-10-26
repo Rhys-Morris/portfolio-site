@@ -10,6 +10,7 @@ body {
 header {
     padding-top: 3vh;
     margin-bottom: 3vh;
+    transition: 1s all ease-in;
 }
 
 main {
@@ -174,6 +175,7 @@ main {
         align-self: center;
         margin-top: auto;
         animation: fadeInDown 3s ease;    
+        transition: 1.5s opacity ease;
 
         @media only screen and (max-width: $breakpoint5) {
             position: relative;
