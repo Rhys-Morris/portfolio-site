@@ -32,10 +32,6 @@ window.addEventListener('scroll', (e) => {
     previousScrollPosition = window.scrollY;
 })
 
-// Hide scroll down indicator as soon as user scrolls down
-
-// Section content fade in with scroll down page
-
 // ----- OPEN/CLOSE HAMBURGER MENU -----
 
 const hamburger = document.querySelector('.hamburger-div');
@@ -93,7 +89,7 @@ hamburger.addEventListener('click', () => {
         hamburgerOpen = true;
     }
 
-    // Deal with clicking on links
+    // Close drop down when link clicked
     navLink.forEach(link => {
         link.addEventListener('click', () => {
             navList.style.display = 'none';
@@ -105,7 +101,7 @@ hamburger.addEventListener('click', () => {
     })
 })
 
-// Add animations to languages section
+// ----- ANIMATIONS -----
 
 const git = document.querySelector('.git');
 
@@ -172,3 +168,5 @@ rubyIcon.addEventListener('mouseout', () => {
     rubyIcon.classList.remove('animate__animated')
     rubyIcon.classList.remove('animate__swing')
 })
+
+// Section content fade in with scroll down page
