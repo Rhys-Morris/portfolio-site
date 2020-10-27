@@ -405,6 +405,7 @@ main {
     align-self: flex-start; }
   .hero__text {
     font-size: 1.6rem;
+    font-weight: 300;
     word-spacing: 2px;
     width: 25vw;
     margin-bottom: 5vh;
@@ -458,6 +459,7 @@ main {
   .about__text {
     width: 30vw;
     font-size: 1.5rem;
+    font-weight: 300;
     word-spacing: 2px;
     color: #d5d5d5; }
     @media only screen and (max-width: 750px) {
