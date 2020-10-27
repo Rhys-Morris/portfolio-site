@@ -31,6 +31,7 @@ window.addEventListener('scroll', (e) => {
         scrollDownIcon.style.opacity = '1';
         if (screen.width > 500) {
             navBar.classList.remove('fadeUp'); 
+            navBar.classList.remove('sticky');
         }    
     }
 

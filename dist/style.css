@@ -309,8 +309,7 @@ main {
     z-index: 200;
     width: 100%;
     background-color: rgba(4, 7, 33, 0.9);
-    height: 9vh;
-    box-shadow: 0 3px 3px #000; }
+    height: 9vh; }
   .nav.fadeUp {
     position: fixed;
     top: 0;
