@@ -286,7 +286,7 @@ body {
 header {
   padding-top: 3vh;
   margin-bottom: 3vh;
-  transition: 1s all ease-in; }
+  transition: 1s all ease; }
 
 main {
   display: flex;
@@ -408,14 +408,14 @@ main {
     @media only screen and (max-width: 600px) {
       .hero__scroll-down {
         position: relative;
-        bottom: 6.5vh; } }
+        bottom: 5vh; } }
 
 .about {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 15vh;
+  margin-top: 5vh;
   padding-top: 10vh; }
   .about__header {
     padding-right: 10rem; }
@@ -471,7 +471,7 @@ main {
       background-color: #7accff; }
 
 .work {
-  margin-top: 15vh;
+  margin-top: 5vh;
   padding-top: 10vh;
   display: flex;
   flex-direction: column; }
@@ -531,7 +531,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 15vh;
+  margin-top: 5vh;
   padding-top: 10vh; }
   .contact__header {
     padding-right: 10rem; }

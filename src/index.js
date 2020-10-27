@@ -1,11 +1,7 @@
 // ----- SCROLL FUNCTIONALITY -----
 
-window.addEventListener('click', (e) => {
-    console.log(e.target);
-})
-
-const header = document.querySelector('header');
 const scrollDownIcon = document.querySelector('.hero__scroll-down');
+const header = document.querySelector('.index__header');
 let previousScrollPosition = 0;
 
 window.addEventListener('scroll', (e) => {
@@ -20,14 +16,23 @@ window.addEventListener('scroll', (e) => {
         scrollDownIcon.style.opacity = '1';
     }
     
-    /* if (window.scrollY > previousScrollPosition) {
-        header.style.position = 'relative';
+    /*
+    // Scroll forwards --> remove sticky nav
+    if (window.scrollY > previousScrollPosition) {
+        navBar.style.position = 'relative';
     }
 
+    // Scroll backwards --> reveal sticky nav
     if (window.scrollY < previousScrollPosition) {
-        header.style.position = 'fixed';
+        navBar.style.position = 'fixed';
+        navBar.style.right = '2vw';
+        navBar.style.top = '0';
+        navBar.style['padding-top'] = '3vh';
+        navBar.style['background'] = '#040721';
+        navBar.style['z-index'] = '100';
+        navBar.style.width = '100vw';
+        navBar.transition = '.5s all'
     } */
-
 
     previousScrollPosition = window.scrollY;
 })
