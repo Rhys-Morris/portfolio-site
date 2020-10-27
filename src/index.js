@@ -1,8 +1,6 @@
 // ----- SCROLL FUNCTIONALITY -----
 
 const scrollDownIcon = document.querySelector('.hero__scroll-down');
-const header = document.querySelector('.index__header');
-let previousScrollPosition = 0;
 
 window.addEventListener('scroll', (e) => {
     
@@ -15,26 +13,6 @@ window.addEventListener('scroll', (e) => {
     if (window.scrollY == 0) {
         scrollDownIcon.style.opacity = '1';
     }
-    
-    /*
-    // Scroll forwards --> remove sticky nav
-    if (window.scrollY > previousScrollPosition) {
-        navBar.style.position = 'relative';
-    }
-
-    // Scroll backwards --> reveal sticky nav
-    if (window.scrollY < previousScrollPosition) {
-        navBar.style.position = 'fixed';
-        navBar.style.right = '2vw';
-        navBar.style.top = '0';
-        navBar.style['padding-top'] = '3vh';
-        navBar.style['background'] = '#040721';
-        navBar.style['z-index'] = '100';
-        navBar.style.width = '100vw';
-        navBar.transition = '.5s all'
-    } */
-
-    previousScrollPosition = window.scrollY;
 })
 
 // ----- OPEN/CLOSE HAMBURGER MENU -----
@@ -174,4 +152,37 @@ rubyIcon.addEventListener('mouseout', () => {
     rubyIcon.classList.remove('animate__swing')
 })
 
-// Section content fade in with scroll down page
+// ----- SECTION FADE IN ON SCROLL -----
+
+const sections = [
+    document.querySelector('.about'),
+    document.querySelector('.work'),
+    document.querySelector('.contact')
+];
+
+// Debounce to prevent extraneous calls to checkFade on scroll
+function debounce(func, wait = 5, immediate = true) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+
+function checkFade(e) {
+    sections.forEach(section => {
+        let fadeInAt = section.offsetTop;
+        if ((window.scrollY + window.innerHeight * 0.75) > fadeInAt) {
+            section.classList.add('active');
+        }
+    })
+}
+
+window.addEventListener('scroll', debounce(checkFade))

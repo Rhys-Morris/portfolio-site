@@ -416,7 +416,13 @@ main {
   justify-content: center;
   align-items: flex-start;
   margin-top: 5vh;
-  padding-top: 10vh; }
+  padding-top: 10vh;
+  opacity: 0;
+  transform: translateY(-3rem);
+  transition: 1.5s all; }
+  .about.active {
+    opacity: 1;
+    transform: translateY(0); }
   .about__header {
     padding-right: 10rem; }
     @media only screen and (max-width: 600px) {
@@ -474,7 +480,13 @@ main {
   margin-top: 5vh;
   padding-top: 10vh;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(-3rem);
+  transition: 2s all; }
+  .work.active {
+    opacity: 1;
+    transform: translateY(0); }
   .work__header {
     align-self: flex-end;
     padding-right: 0;
@@ -532,7 +544,13 @@ main {
   justify-content: center;
   align-items: flex-start;
   margin-top: 5vh;
-  padding-top: 10vh; }
+  padding-top: 10vh;
+  opacity: 0;
+  transform: translateY(-3rem);
+  transition: 2s all; }
+  .contact.active {
+    opacity: 1;
+    transform: translateY(0); }
   .contact__header {
     padding-right: 10rem; }
     @media only screen and (max-width: 600px) {

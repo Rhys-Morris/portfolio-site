@@ -196,6 +196,15 @@ main {
     margin-top: 5vh;
     padding-top: 10vh;
     
+    // Fade in section
+    opacity: 0;
+    transform: translateY(-3rem);
+    transition: 1.5s all;
+
+    &.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
     &__header {
         padding-right: 10rem;
@@ -279,6 +288,16 @@ main {
     display: flex;
     flex-direction: column;
 
+    // Fade In
+    opacity: 0;
+    transform: translateY(-3rem);
+    transition: 2s all;
+
+    &.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
     &__header {
         align-self: flex-end;
         padding-right: 0;
@@ -359,6 +378,16 @@ main {
 
     margin-top: 5vh;
     padding-top: 10vh;
+
+    // Fade In
+    opacity: 0;
+    transform: translateY(-3rem);
+    transition: 2s all;
+    
+    &.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
     &__header {
         padding-right: 10rem;
