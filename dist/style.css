@@ -299,7 +299,24 @@ main {
   justify-content: flex-end;
   align-items: flex-start;
   height: 10vh;
-  padding: 0 2rem; }
+  padding: 0 2rem;
+  transition: .6s all; }
+  .nav.sticky {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding-top: 3vh;
+    z-index: 200;
+    width: 100%;
+    background-color: rgba(4, 7, 33, 0.9);
+    height: 9vh;
+    box-shadow: 0 3px 3px #000; }
+  .nav.fadeUp {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    transform: translateY(-10vh); }
   @media only screen and (max-width: 600px) {
     .nav {
       padding: 0 1rem; } }
@@ -322,7 +339,7 @@ main {
     font-size: 1.2rem;
     font-family: 'Roboto Mono', monospace;
     padding-bottom: .5rem;
-    margin-right: 2rem;
+    margin-right: 3rem;
     transition: .2s all; }
   .nav__link:hover, .nav__link:active {
     border-bottom: 2px solid #7accff; }
