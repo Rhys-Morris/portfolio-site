@@ -261,6 +261,7 @@
     width: 100%;
     height: 4px;
     background-color: $color-primary-faded;
+    transition: .3s transform;
 }
 
 // Hamburger openend
@@ -271,6 +272,7 @@
 
 .hamburger-line--2.active {
     display: none;
+    
 }
 
 .hamburger-line--3.active {

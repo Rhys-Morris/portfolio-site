@@ -305,6 +305,7 @@
   width: 100%;
   height: 4px;
   background-color: #bee6ff;
+  transition: 0.3s transform;
 }
 
 .hamburger-line--1.active {
