@@ -263,8 +263,9 @@
     background-color: $color-primary-faded;
 }
 
+// Hamburger openend
 .hamburger-line--1.active {
-    transform: rotate(45deg);
+    transform: rotate(43deg);
     transform-origin: left;
 }
 
@@ -273,6 +274,6 @@
 }
 
 .hamburger-line--3.active {
-    transform: rotate(-45deg);
+    transform: rotate(-43deg);
     transform-origin: left;
 }
