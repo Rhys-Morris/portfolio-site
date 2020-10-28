@@ -57,9 +57,8 @@ let hamburgerOpen = false;
 
 hamburger.addEventListener('click', () => {
     
-    // First time opened
+    // First time opened --> Restyle bar
     if (!hamburgerOpened) {
-        // Style bar
         navList.style.display = 'flex';
         navList.style['flex-direction'] = 'column';
         navList.style['position'] = 'absolute';
@@ -82,13 +81,17 @@ hamburger.addEventListener('click', () => {
         hamburgerOpened = true;
     }
 
-    // Subsequent opening/closes
-    if (hamburgerOpen) {
+    function closeNav() {
         navList.style.display = 'none';
         main.style.opacity = '1';
 
         hamburgerLines.forEach(line => line.classList.remove('active'));
         hamburgerOpen = false;
+    }
+
+    // Subsequent opening/closes
+    if (hamburgerOpen) {
+        closeNav()
     } else {
         navList.style.display = 'flex';
         navList.style['z-index'] = '100';
@@ -101,12 +104,19 @@ hamburger.addEventListener('click', () => {
     // Close drop down when link clicked
     navLink.forEach(link => {
         link.addEventListener('click', () => {
-            navList.style.display = 'none';
-            main.style.opacity = '1';
-    
-            hamburgerLines.forEach(line => line.classList.remove('active'));
-            hamburgerOpen = false;
+            closeNav();
         })
+    })
+
+    // Close nav when touch outside links
+    window.addEventListener('click', (e) => {
+        if (navLink.includes(e.target)) {
+            console.log('clicked link');
+        } else if (e.target == hamburger || hamburgerLines.includes(e.target)) {
+            console.log('Opened nav');
+        } else {
+            closeNav();
+        }
     })
 })
 
