@@ -221,7 +221,7 @@ main {
     
     // Fade in section
     opacity: 0;
-    transform: translateY(-3rem);
+    transform: translateY(3rem);
     transition: 1.5s all;
 
     &.active {
@@ -314,7 +314,7 @@ main {
 
     // Fade In
     opacity: 0;
-    transform: translateY(-3rem);
+    transform: translateY(3rem);
     transition: 2s all;
 
     &.active {
@@ -419,7 +419,7 @@ main {
 
     // Fade In
     opacity: 0;
-    transform: translateY(-3rem);
+    transform: translateY(3rem);
     transition: 2s all;
     
     &.active {

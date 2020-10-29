@@ -553,7 +553,7 @@ main {
   margin-top: 5vh;
   padding-top: 10vh;
   opacity: 0;
-  transform: translateY(-3rem);
+  transform: translateY(3rem);
   transition: 1.5s all;
 }
 .about.active {
@@ -640,7 +640,7 @@ main {
   display: flex;
   flex-direction: column;
   opacity: 0;
-  transform: translateY(-3rem);
+  transform: translateY(3rem);
   transition: 2s all;
 }
 .work.active {
@@ -725,7 +725,7 @@ main {
   margin-top: 5vh;
   padding-top: 10vh;
   opacity: 0;
-  transform: translateY(-3rem);
+  transform: translateY(3rem);
   transition: 2s all;
 }
 @media screen and (max-width: 1400px) {

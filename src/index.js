@@ -10,6 +10,11 @@ const main = document.querySelector('main');
 const hamburgerLines = Array.from(document.querySelectorAll('.hamburger-line'));
 const scrollDownIcon = document.querySelector('.hero__scroll-down');
 const header = document.querySelector('header');
+const sections = [
+    document.querySelector('.about'),
+    document.querySelector('.work'),
+    document.querySelector('.contact')
+];
 
 // ----- SCROLL FUNCTIONALITY -----
 
@@ -32,7 +37,8 @@ window.addEventListener('scroll', (e) => {
         if (screen.width > 500) {
             navBar.classList.remove('fadeUp'); 
             navBar.classList.remove('sticky');
-        }    
+        }
+        sections.forEach(section => section.classList.remove('active'))
     }
 
     // Drop nav back in
@@ -163,12 +169,6 @@ rubyIcon.addEventListener('mouseenter', () => {
 })
 
 // ----- SECTION FADE IN ON SCROLL -----
-
-const sections = [
-    document.querySelector('.about'),
-    document.querySelector('.work'),
-    document.querySelector('.contact')
-];
 
 // Debounce to prevent extraneous calls to checkFade on scroll
 function debounce(func, wait = 5, immediate = true) {
