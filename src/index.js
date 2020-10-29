@@ -134,7 +134,7 @@ function animate(target, animation) {
 
     setTimeout(() => {
         target.classList.remove(`animate__${animation}`);
-    }, 2000)
+    }, 1200)
 }
 
 const git = document.querySelector('.git');
