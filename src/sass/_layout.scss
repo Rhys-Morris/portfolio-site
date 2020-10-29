@@ -449,12 +449,36 @@ main {
         }
     }
 
+    &__map-box {
+        position: relative;
+        width: 100%;
+
+        &__text {
+            z-index: 90;
+            position: absolute;
+            top: 2rem;
+            right: 1rem;
+            padding: 1rem;
+            background-color: rgba(4, 7, 33, .7);
+            color: $color-font-primary;
+            font-size: 1.4rem;
+            border-radius: .5rem;
+
+            @media screen and (max-width: $breakpoint2) {
+                top: 1rem;
+            }
+        }
+    }
+
     &__map {
         margin-left: 2rem;
         border-radius: .5rem;
         filter: grayscale(1) sepia(30%) hue-rotate(180deg) saturate(300%);
         transition: .5s all;
         width: 100%;
+        align-self: start;
+        position: relative;
+        top: 1rem;
         
         &:hover {
             filter: none;
@@ -463,11 +487,12 @@ main {
         @media screen and (max-width: $breakpoint2) {
             margin-left: 0;
             margin-bottom: 3rem;
+            filter: none;
+            top: 0;
         }
 
         @media screen and (max-width: $breakpoint4) {
             height: 40rem;
-            align-self: center;
         }
 
         @media screen and (max-width: $breakpoint5) {

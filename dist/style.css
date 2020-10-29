@@ -769,12 +769,35 @@ main {
     align-items: start;
   }
 }
+.contact__map-box {
+  position: relative;
+  width: 100%;
+}
+.contact__map-box__text {
+  z-index: 90;
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  padding: 1rem;
+  background-color: rgba(4, 7, 33, 0.7);
+  color: #eee;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+}
+@media screen and (max-width: 1200px) {
+  .contact__map-box__text {
+    top: 1rem;
+  }
+}
 .contact__map {
   margin-left: 2rem;
   border-radius: 0.5rem;
   filter: grayscale(1) sepia(30%) hue-rotate(180deg) saturate(300%);
   transition: 0.5s all;
   width: 100%;
+  align-self: start;
+  position: relative;
+  top: 1rem;
 }
 .contact__map:hover {
   filter: none;
@@ -783,12 +806,13 @@ main {
   .contact__map {
     margin-left: 0;
     margin-bottom: 3rem;
+    filter: none;
+    top: 0;
   }
 }
 @media screen and (max-width: 750px) {
   .contact__map {
     height: 40rem;
-    align-self: center;
   }
 }
 @media screen and (max-width: 600px) {
