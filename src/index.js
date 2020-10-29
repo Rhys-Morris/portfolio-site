@@ -111,9 +111,9 @@ hamburger.addEventListener('click', () => {
     // Close nav when touch outside links
     window.addEventListener('click', (e) => {
         if (navLink.includes(e.target)) {
-            console.log('clicked link');
+            return
         } else if (e.target == hamburger || hamburgerLines.includes(e.target)) {
-            console.log('Opened nav');
+           return
         } else {
             closeNav();
         }
@@ -131,15 +131,12 @@ function animate(target, animation) {
     }, 2000)
 }
 
-
 const git = document.querySelector('.git');
 const htmlIcon = document.querySelector('.html5');
 const cssIcon = document.querySelector('.css3');
 const sassIcon = document.querySelector('.sass');
 const javascriptIcon = document.querySelector('.javascript-icon');
 const rubyIcon = document.querySelector('.ruby');
-
-
 
 git.addEventListener('mouseenter', () => {
     animate(git, 'rubberBand')

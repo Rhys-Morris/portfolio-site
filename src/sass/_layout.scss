@@ -30,7 +30,7 @@ main {
     padding: 0 2rem;
 
     // Animations
-    transition: .6s all;
+    transition: .3s all;
 
     &.sticky {
         position: fixed;
@@ -398,10 +398,24 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+
+    width: 70%;
 
     margin-top: 5vh;
     padding-top: 10vh;
+
+    @media screen and (max-width: $breakpoint1) {
+        width: 80%;
+    }
+
+    @media screen and (max-width: $breakpoint2) {
+        width: 60%;
+    }
+
+    @media screen and (max-width: $breakpoint4) {
+        width: 80%;
+    }
 
     // Fade In
     opacity: 0;
@@ -414,12 +428,50 @@ main {
     }
 
     &__header {
+        align-self: start;
         padding-right: 10rem;
 
         @media only screen and (max-width: $breakpoint5) {
             align-self: flex-end;
             padding-left: 5rem;
             padding-right: 0;
+        }
+    }
+
+    &__form-map-wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: $breakpoint2) {
+            flex-direction: column-reverse;
+            align-items: start;
+        }
+    }
+
+    &__map {
+        margin-left: 2rem;
+        border-radius: .5rem;
+        filter: grayscale(1) sepia(30%) hue-rotate(180deg) saturate(300%);
+        transition: .5s all;
+        width: 100%;
+        
+        &:hover {
+            filter: none;
+        }
+
+        @media screen and (max-width: $breakpoint2) {
+            margin-left: 0;
+            margin-bottom: 3rem;
+        }
+
+        @media screen and (max-width: $breakpoint4) {
+            height: 40rem;
+            align-self: center;
+        }
+
+        @media screen and (max-width: $breakpoint5) {
+            height: 35rem;
         }
     }
 }
