@@ -45,6 +45,7 @@ main {
 
     &.fadeUp {
         position: fixed;
+        z-index: 200;
         top: 0;
         right: 0;
         width: 100%;
@@ -78,10 +79,10 @@ main {
         color: $color-font-primary;
         border-bottom: 2px solid $color-bg;
         text-decoration: none;
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         font-family: 'Roboto Mono', monospace;
         padding-bottom: .5rem;
-        margin-right: 3rem;
+        margin-right: 5rem;
         transition: .2s all;
     }
 
@@ -92,7 +93,7 @@ main {
 }
 
 .resume {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     padding: 1rem 2rem;
     text-decoration: none;
     margin-right: 0;
@@ -311,6 +312,7 @@ main {
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
     // Fade In
     opacity: 0;
@@ -340,6 +342,13 @@ main {
         }
     }
 
+    &__sub-header {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 300;
+        padding: 5rem 0;
+    }
+
     &__languages {
         display: flex;
         justify-content: space-around;
@@ -347,7 +356,7 @@ main {
         flex-wrap: wrap;
 
         padding: 5rem;
-        width: 60vw;
+        width: 100%;
 
         @media only screen and (max-width: $breakpoint2) {
             width: 80vw;
@@ -375,6 +384,10 @@ main {
             row-gap: 2rem;
         }
 
+        &__header {
+            text-align: center;
+        }
+
         &__icon {
 
             &-box {
@@ -388,6 +401,78 @@ main {
                 margin-top: 1.2rem;
                 font-size: 1.4rem;  
             }
+        }
+    }
+
+    &__projects {
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+
+        width: 100%;
+        
+        &__project {
+            display: flex;
+            flex-direction: column;
+            width: 55rem;
+            height: 30rem;      // TEST
+            background-position: center;
+            background-size: cover;
+            border-radius: .5rem;
+            position: relative;
+            transition: 2s all;
+
+            &--1 {
+                background-image: linear-gradient(to bottom, rgba(4, 7, 33, .7  ), rgba(4, 7, 33, .6)),
+                                  url('../src/img/todoproject.png');
+                transition: 2s all;
+
+                &:hover {
+                    background-image: linear-gradient(to bottom, rgba(4, 7, 33, 0), rgba(4, 7, 33, 0)),
+                                      url('../src/img/todoproject.png');
+                    border: none;
+                }
+            }
+
+            &--2 {
+                background-image: linear-gradient(to bottom, rgba(4, 7, 33, .9  ), rgba(4, 7, 33, .8)),
+                                  url('../src/img/connect4project.PNG');
+
+                &:hover {
+                    background-image: url('../src/img/connect4project.PNG');
+                }
+            }
+
+        }
+
+        &__header {
+            padding: 2rem;
+            display: inline;
+            font-size: 2rem;
+            font-weight: 300;
+            background-color: rgba(4, 7, 33, .8);
+        }
+
+        &__text {
+            position: absolute;
+            width: 45%;
+            right: 4rem;
+            top: 35%;
+            font-size: 1.4rem;
+            padding: 2rem;
+            background-color: rgba(4, 7, 33, .8);
+        }
+
+        &__github-link {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+        }
+
+        &__github-icon {
+            height: 2.5rem;
         }
     }
 }
@@ -471,7 +556,7 @@ main {
     }
 
     &__map {
-        margin-left: 2rem;
+        margin-left: 4rem;
         border-radius: .5rem;
         filter: grayscale(1) sepia(30%) hue-rotate(180deg) saturate(300%);
         transition: .5s all;

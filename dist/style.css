@@ -387,6 +387,7 @@ main {
 }
 .nav.fadeUp {
   position: fixed;
+  z-index: 200;
   top: 0;
   right: 0;
   width: 100%;
@@ -419,10 +420,10 @@ main {
   color: #eee;
   border-bottom: 2px solid #040721;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-family: "Roboto Mono", monospace;
   padding-bottom: 0.5rem;
-  margin-right: 3rem;
+  margin-right: 5rem;
   transition: 0.2s all;
 }
 .nav__link:hover, .nav__link:active {
@@ -430,7 +431,7 @@ main {
 }
 
 .resume {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   padding: 1rem 2rem;
   text-decoration: none;
   margin-right: 0;
@@ -639,6 +640,7 @@ main {
   padding-top: 10vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   opacity: 0;
   transform: translateY(3rem);
   transition: 2s all;
@@ -666,13 +668,19 @@ main {
     left: 15vw;
   }
 }
+.work__sub-header {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 5rem 0;
+}
 .work__languages {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   padding: 5rem;
-  width: 60vw;
+  width: 100%;
 }
 @media only screen and (max-width: 1200px) {
   .work__languages {
@@ -705,6 +713,9 @@ main {
     row-gap: 2rem;
   }
 }
+.work__languages__header {
+  text-align: center;
+}
 .work__languages__icon-box {
   display: flex;
   flex-direction: column;
@@ -714,6 +725,62 @@ main {
   font-family: "Roboto Mono", monospace;
   margin-top: 1.2rem;
   font-size: 1.4rem;
+}
+.work__projects {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.work__projects__project {
+  display: flex;
+  flex-direction: column;
+  width: 55rem;
+  height: 30rem;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.5rem;
+  position: relative;
+  transition: 2s all;
+}
+.work__projects__project--1 {
+  background-image: linear-gradient(to bottom, rgba(4, 7, 33, 0.7), rgba(4, 7, 33, 0.6)), url("../src/img/todoproject.png");
+  transition: 2s all;
+}
+.work__projects__project--1:hover {
+  background-image: linear-gradient(to bottom, rgba(4, 7, 33, 0), rgba(4, 7, 33, 0)), url("../src/img/todoproject.png");
+  border: none;
+}
+.work__projects__project--2 {
+  background-image: linear-gradient(to bottom, rgba(4, 7, 33, 0.9), rgba(4, 7, 33, 0.8)), url("../src/img/connect4project.PNG");
+}
+.work__projects__project--2:hover {
+  background-image: url("../src/img/connect4project.PNG");
+}
+.work__projects__header {
+  padding: 2rem;
+  display: inline;
+  font-size: 2rem;
+  font-weight: 300;
+  background-color: rgba(4, 7, 33, 0.8);
+}
+.work__projects__text {
+  position: absolute;
+  width: 45%;
+  right: 4rem;
+  top: 35%;
+  font-size: 1.4rem;
+  padding: 2rem;
+  background-color: rgba(4, 7, 33, 0.8);
+}
+.work__projects__github-link {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+.work__projects__github-icon {
+  height: 2.5rem;
 }
 
 .contact {
@@ -790,7 +857,7 @@ main {
   }
 }
 .contact__map {
-  margin-left: 2rem;
+  margin-left: 4rem;
   border-radius: 0.5rem;
   filter: grayscale(1) sepia(30%) hue-rotate(180deg) saturate(300%);
   transition: 0.5s all;
